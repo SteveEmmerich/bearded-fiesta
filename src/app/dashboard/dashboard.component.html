@@ -1,0 +1,55 @@
+<div layout="row">
+<md-card flex="30">
+  <md-card-title>
+    Users
+  </md-card-title>
+  <md-card-content>
+    <md-list>
+      <md-list-item *ngFor="let user of users | async">
+        <img md-list-avatar src="user.avatar" alt="{{user.displayName}}">
+        <h3 md-line> {{user.displayName}} </h3>
+        <p md-line>
+          <span> {{user.address}} </span>
+          <span class="demo-2"> -- {{user.phone}} </span>
+        </p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+<div flex="5"></div>
+<md-card flex="30">
+  <md-card-title>
+    Pools
+  </md-card-title>
+  <md-card-content>
+    <md-list>
+      <md-list-item *ngFor="let pool of pools | async">
+        <img md-list-avatar src="pool.avatar" alt="{{pool.displayName}}">
+        <h3 md-line> {{pool.displayName}} </h3>
+        <p md-line>
+          <span> {{pool.address}} </span>
+          <span class="demo-2"> -- {{pool.phone}} </span>
+        </p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+<div flex="5"></div>
+<md-card flex="30">
+  <md-card-title>
+    Metrics
+  </md-card-title>
+  <md-card-content>
+    <md-list>
+      <md-list-item *ngFor="let pool of pools | async">
+        <img md-list-avatar src="pool.avatar" alt="{{pool.displayName}}">
+        <h3 md-line> {{pool.displayName}} </h3>
+        <p md-line>
+          <span> {{pool.address}} </span>
+          <span class="demo-2"> -- {{pool.phone}} </span>
+        </p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+</div>

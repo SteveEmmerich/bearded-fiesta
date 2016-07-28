@@ -1,0 +1,21 @@
+<md-card>
+  <md-card-title>Login</md-card-title>
+  <md-card-content>
+    <div *ngIf="!loggingIn">
+    <md-input placeholder="Email" [(ngModel)]="user.email" name="email"  [type]="email">
+    </md-input>
+    <md-input placeholder="Password" [(ngModel)]="user.password" name="password" [type]="password">
+    </md-input>
+    <md-input placeholder="Company" [(ngModel)]="_data.Company" name="company" [type]="text">
+    </md-input>
+   <!-- <input [(ngModel)]="user.email" type="email">
+    <input [(ngModel)]="user.password" type="password">-->
+    </div>
+    <md-spinner *ngIf="loggingIn"></md-spinner>
+  </md-card-content>
+  <md-card-actions align="end">
+    <button md-button md-raised-button (click)="login()">
+      Login
+    </button>
+  </md-card-actions>
+</md-card>
