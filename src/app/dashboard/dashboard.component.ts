@@ -33,5 +33,11 @@ export class DashboardComponent implements OnInit {
       }
     })
   }
+  details(pid)
+  {
+    this._router.navigate(['/pool-details/'+pid]).catch((err) => {
+          console.error('nav failed: ', err);
+        })
+  }
 
 }

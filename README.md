@@ -29,3 +29,12 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Quick Start
+Run `npm install`
+Run `ng serve`
+
+Login with credentials: 
+Email: test@test.com
+Password: test
+Company: testCompany

@@ -64,6 +64,16 @@ export class LoginComponent implements OnInit {
           console.log('error: ', err);
         })
   }
+  signUp()
+  {
+    this.loggingIn = true;
+    this.af.auth.createUser({email: this.user.email, password: this.user.password})
+      .then((user) => {
+        //TODO: Prompt for role
+        //TODO: Login
+        //TODO: Navigate to profile page
+      })
+  }
   change()
   {
     console.log("change");

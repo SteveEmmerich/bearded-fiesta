@@ -25,10 +25,10 @@
     <md-list>
       <md-list-item *ngFor="let pool of pools | async">
         <img md-list-avatar src="pool.avatar" alt="{{pool.displayName}}">
-        <h3 md-line> {{pool.displayName}} </h3>
+        <h3 md-line>Pool: {{pool.name}} </h3>
         <p md-line>
-          <span> {{pool.address}} </span>
-          <span class="demo-2"> -- {{pool.phone}} </span>
+          <span> Owner: {{pool.owner}} </span>
+          <span class="demo-2"> Technician -- {{pool.technician}} </span>
         </p>
       </md-list-item>
     </md-list>
@@ -41,7 +41,7 @@
   </md-card-title>
   <md-card-content>
     <md-list>
-      <md-list-item *ngFor="let pool of pools | async">
+      <md-list-item (click)="details(pool.$key)" *ngFor="let pool of pools | async">
         <img md-list-avatar src="pool.avatar" alt="{{pool.displayName}}">
         <h3 md-line> {{pool.displayName}} </h3>
         <p md-line>
