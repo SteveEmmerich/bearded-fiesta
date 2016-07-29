@@ -7,6 +7,8 @@ import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { DataService } from './data.service'
+import { Flex } from './flex.directive';
+import { Layout } from './layout.directive';
 
 @Component({
   moduleId: module.id,
@@ -20,7 +22,9 @@ import { DataService } from './data.service'
     MdToolbar,
     MD_SIDENAV_DIRECTIVES,
     MD_LIST_DIRECTIVES,
-    MdIcon],
+    MdIcon,
+    Flex,
+    Layout],
   providers: [AngularFire,MdIconRegistry, DataService],
   styles: [`
     md-sidenav-layout {
@@ -29,7 +33,7 @@ import { DataService } from './data.service'
   `]
 })
 export class AppComponent implements OnInit {
-  title = 'app works!';
+  title = 'Pool Master';
   auth: any = null;
   views: Object[] = [
     {
@@ -40,7 +44,8 @@ export class AppComponent implements OnInit {
     {
       name: "Dashboard",
       description: "Over all view",
-      icon: "pets"
+      icon: "pets",
+      route: "dashboard"
     }
   ];
   constructor(private af: AngularFire) {}

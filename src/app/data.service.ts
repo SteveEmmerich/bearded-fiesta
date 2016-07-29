@@ -8,7 +8,13 @@ export class DataService {
   _reports: FirebaseListObservable<any[]>;
   _company: string;
   constructor(private af: AngularFire) {
-    
+     let comp = localStorage.getItem("company");
+     if (comp)
+     {
+       this._company = comp
+       this.init();
+     }
+      
   }
   get Users()
   {
@@ -35,6 +41,7 @@ export class DataService {
     this._users = this.af.database.list('/' + this._company + '/users');
     this._pools = this.af.database.list('/' + this._company + '/pools');
     this._reports = this.af.database.list('/' + this._company + '/reports');
+    localStorage.setItem("company", this._company);
   }
 
 }
